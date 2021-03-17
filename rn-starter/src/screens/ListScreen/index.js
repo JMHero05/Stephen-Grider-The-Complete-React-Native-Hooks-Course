@@ -4,31 +4,31 @@ import { styles } from './styles';
 
 const ListScreen = () => {
   const friends = [
-    { name: 'Teresa' },
-    { name: 'Jake' },
-    { name: 'Mark' },
-    { name: 'Glenda' },
-    { name: 'Melinda' },
-    { name: 'David' },
-    { name: 'Tess' },
-    { name: 'Ross' },
-    { name: 'Matt' },
-    { name: 'Olivia' },
-    { name: 'Jeff' },
-    { name: 'Isaac' },
+    { name: 'Teresa', age: 28 },
+    { name: 'Jake', age: 34 },
+    { name: 'Mark', age: 65 },
+    { name: 'Glenda', age: 65 },
+    { name: 'Melinda', age: 58 },
+    { name: 'David', age: 57 },
+    { name: 'Tess', age: 29 },
+    { name: 'Ross', age: 30 },
+    { name: 'Matt', age: 24 },
+    { name: 'Olivia', age: 25 },
+    { name: 'Jeff', age: 39 },
+    { name: 'Isaac', age: 27 },
   ];
 
   return (
     <View>
       <FlatList
-        horizontal
-        showsHorizontalScrollIndicator={false}
         keyExtractor={(friend) => friend.name}
         data={friends}
         renderItem={({ item }) => {
+          const { name, age } = item;
+
           return (
             <Text style={styles.textStyle} key={item.name}>
-              {item.name}
+              {name} - Age: {age}
             </Text>
           );
         }}
