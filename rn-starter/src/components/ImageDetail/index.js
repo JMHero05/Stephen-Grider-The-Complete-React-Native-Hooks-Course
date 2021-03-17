@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const ImageDetail = () => {
+const ImageDetail = ({ title }) => {
   return (
     <View>
-      <Text>Image Detail</Text>
+      <Text>{title}</Text>
     </View>
   );
 };
