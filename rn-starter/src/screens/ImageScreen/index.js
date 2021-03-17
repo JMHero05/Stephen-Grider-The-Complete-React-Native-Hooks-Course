@@ -8,18 +8,25 @@ const ImageScreen = () => {
     <View>
       <ImageDetail
         title='Forest'
-        imgSrc={require('../../../assets/forest.jpg')}
+        imgSource={require('../../../assets/forest.jpg')}
+        imgScore={randomNum()}
       />
       <ImageDetail
         title='Beach'
-        imgSrc={require('../../../assets/beach.jpg')}
+        imgSource={require('../../../assets/beach.jpg')}
+        imgScore={randomNum()}
       />
       <ImageDetail
         title='Mountain'
-        imgSrc={require('../../../assets/mountain.jpg')}
+        imgSource={require('../../../assets/mountain.jpg')}
+        imgScore={randomNum()}
       />
     </View>
   );
+};
+
+const randomNum = () => {
+  return Math.floor(Math.random() * 10);
 };
 
 export default ImageScreen;
