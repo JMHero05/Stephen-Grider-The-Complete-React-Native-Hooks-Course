@@ -14,11 +14,15 @@ const ListScreen = () => {
     { name: 'Ross' },
     { name: 'Matt' },
     { name: 'Olivia' },
+    { name: 'Jeff' },
+    { name: 'Isaac' },
   ];
 
   return (
     <View>
       <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
         keyExtractor={(friend) => friend.name}
         data={friends}
         renderItem={({ item }) => {
