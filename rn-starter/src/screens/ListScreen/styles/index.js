@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-  style,
+export const styles = StyleSheet.create({
+  textStyle: {
+    marginVertical: 50,
+  },
 });

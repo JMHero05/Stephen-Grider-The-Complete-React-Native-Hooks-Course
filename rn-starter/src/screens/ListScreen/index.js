@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
+import { styles } from './styles';
 
 const ListScreen = () => {
   const friends = [
@@ -21,7 +22,11 @@ const ListScreen = () => {
         keyExtractor={(friend) => friend.name}
         data={friends}
         renderItem={({ item }) => {
-          return <Text key={item.name}>{item.name}</Text>;
+          return (
+            <Text style={styles.textStyle} key={item.name}>
+              {item.name}
+            </Text>
+          );
         }}
       />
     </View>
