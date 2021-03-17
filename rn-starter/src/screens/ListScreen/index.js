@@ -18,6 +18,7 @@ const ListScreen = () => {
   return (
     <View>
       <FlatList
+        keyExtractor={(friend) => friend.name}
         data={friends}
         renderItem={({ item }) => {
           return <Text key={item.name}>{item.name}</Text>;
