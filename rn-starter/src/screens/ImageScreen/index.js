@@ -1,11 +1,16 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { styles } from './styles';
+import ImageDetail from '../../components/ImageDetail';
 
 const ImageScreen = () => {
   return (
     <View>
-      <Text>Image Screen!</Text>
+      <ImageDetail />
+      <ImageDetail />
+      <ImageDetail />
+      <ImageDetail />
+      <ImageDetail />
     </View>
   );
 };
