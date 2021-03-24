@@ -9,7 +9,42 @@ const SquareScreen = () => {
   const [green, setGreen] = useState(0);
   const [blue, setBlue] = useState(0);
 
-  const setColor = validColor(red, setRed, green, setGreen, blue, setBlue);
+  const setColor = (color, change) => {
+    switch (color) {
+      case 'red':
+        red + change > 255 || red + change < 0
+          ? alertUser(color, change)
+          : setRed(red + change);
+        return;
+      case 'green':
+        green + change > 255 || green + change < 0
+          ? alertUser(color, change)
+          : setGreen(green + change);
+        return;
+      case 'blue':
+        blue + change > 255 || blue + change < 0
+          ? alertUser(color, change)
+          : setBlue(blue + change);
+        return;
+    }
+  };
+
+  const alertUser = (color, change) => {
+    const tooMuch = `This color can't handle anymore ${color} Broseph`;
+    const tooLittle = `Whoooooa. What do you have against ${color}? Add ${color}, my friend, not take.`;
+
+    switch (color) {
+      case 'red':
+        red + change > 255 ? alert(tooMuch) : alert(tooLittle);
+        return;
+      case 'green':
+        green + change > 255 ? alert(tooMuch) : alert(tooLittle);
+        return;
+      case 'blue':
+        blue + change > 255 ? alert(tooMuch) : alert(tooLittle);
+        return;
+    }
+  };
 
   return (
     <View>
@@ -40,36 +75,3 @@ const SquareScreen = () => {
 };
 
 export default SquareScreen;
-
-function validColor(red, setRed, green, setGreen, blue, setBlue) {
-  return (color, change) => {
-    const tooMuch = `This color can't handle anymore ${color} Broseph!`;
-    const tooLittle = `Whoooooa. What do you have against ${color}? Add ${color}, my friend, not take.`;
-
-    if (color === 'red') {
-      if (red + change > 255) {
-        alert(tooMuch);
-      } else if (red + change < 0) {
-        alert(tooLittle);
-      } else {
-        setRed(red + change);
-      }
-    } else if (color === 'green') {
-      if (green + change > 255) {
-        alert(tooMuch);
-      } else if (green + change < 0) {
-        alert(tooLittle);
-      } else {
-        setGreen(green + change);
-      }
-    } else {
-      if (blue + change > 255) {
-        alert(tooMuch);
-      } else if (blue + change < 0) {
-        alert(tooLittle);
-      } else {
-        setBlue(blue + change);
-      }
-    }
-  };
-}
