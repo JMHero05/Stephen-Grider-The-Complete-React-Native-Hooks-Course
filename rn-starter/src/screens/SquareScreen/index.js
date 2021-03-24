@@ -4,8 +4,21 @@ import ColorCounter from '../../components/ColorCounter';
 
 const COLOR_INCREMENT = 15;
 
+const reducer = (state, action) => {
+  // state === {red: 0, green: 0, blue: 0}
+  // action === { colorToChange: 'red' || 'green' || 'blue', amount: 15 || -15 }
+
+  switch (action.colorToChange) {
+    case 'red':
+    case 'green':
+    case 'blue':
+    default:
+      break;
+  }
+}
+
 const SquareScreen = () => {
-  
+  const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0 });
 
   return (
     <View>
