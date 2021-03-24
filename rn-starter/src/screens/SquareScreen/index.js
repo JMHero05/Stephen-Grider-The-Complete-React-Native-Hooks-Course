@@ -15,17 +15,19 @@ const SquareScreen = () => {
         red + change > 255 || red + change < 0
           ? alertUser(color, change)
           : setRed(red + change);
-        return;
+        break;
       case 'green':
         green + change > 255 || green + change < 0
           ? alertUser(color, change)
           : setGreen(green + change);
-        return;
+        break;
       case 'blue':
         blue + change > 255 || blue + change < 0
           ? alertUser(color, change)
           : setBlue(blue + change);
-        return;
+        break;
+      default:
+        break;
     }
   };
 
@@ -36,13 +38,15 @@ const SquareScreen = () => {
     switch (color) {
       case 'red':
         red + change > 255 ? alert(tooMuch) : alert(tooLittle);
-        return;
+        break;
       case 'green':
         green + change > 255 ? alert(tooMuch) : alert(tooLittle);
-        return;
+        break;
       case 'blue':
         blue + change > 255 ? alert(tooMuch) : alert(tooLittle);
-        return;
+        break;
+      default:
+        break;
     }
   };
 
