@@ -5,16 +5,45 @@ import ColorCounter from '../../components/ColorCounter';
 const COLOR_INCREMENT = 15;
 
 const reducer = (state, action) => {
-  // state === {red: 0, green: 0, blue: 0}
-  // action === { colorToChange: 'red' || 'green' || 'blue', amount: 15 || -15 }
+  let rgbAmount;
 
   switch (action.colorToChange) {
     case 'red':
-      return { ...state, red: state.red + action.amount };
+      rgbAmount = state.red + action.amount;
+      return rgbAmount > 255 || rgbAmount < 0
+        ? alertUser(action.colorToChange, rgbAmount, state)
+        : { ...state, red: rgbAmount };
     case 'green':
-      return { ...state, green: state.green + action.amount };
+      rgbAmount = state.green + action.amount;
+      return rgbAmount > 255 || rgbAmount < 0
+        ? alertUser(action.colorToChange, rgbAmount, state)
+        : { ...state, green: rgbAmount };
     case 'blue':
-      return { ...state, blue: state.blue + action.amount };
+      rgbAmount = state.blue + action.amount;
+      return rgbAmount > 255 || rgbAmount < 0
+        ? alertUser(action.colorToChange, rgbAmount, state)
+        : { ...state, blue: rgbAmount };
+    default:
+      return state;
+  }
+};
+
+// FUNCTION TO ALERT THE USER IF INCREMENTING CREATES INVALID RGB
+
+const alertUser = (color, colorSum, state) => {
+  const tooMuch = `This color can't handle anymore ${color} Broseph`;
+  const tooLittle = `Whoooooa. What do you have against ${color}? Add ${color}, my friend, not take.`;
+
+  switch (color) {
+    case 'red':
+      colorSum > 255 ? alert(tooMuch) : alert(tooLittle);
+      return state;
+    case 'green':
+      colorSum > 255 ? alert(tooMuch) : alert(tooLittle);
+      return state;
+    case 'blue':
+      colorSum > 255 ? alert(tooMuch) : alert(tooLittle);
+      return state;
     default:
       return state;
   }
