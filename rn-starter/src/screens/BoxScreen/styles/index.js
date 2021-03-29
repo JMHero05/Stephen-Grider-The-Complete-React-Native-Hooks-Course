@@ -4,12 +4,22 @@ export const styles = StyleSheet.create({
   viewStyle: {
     borderWidth: 3,
     borderColor: 'black',
-    flexDirection: 'row',
     height: 200,
-    justifyContent: 'flex-start',
+    // flexDirection: 'row',
   },
-  textStyle: {
+  textOneStyle: {
     borderWidth: 3,
     borderColor: 'red',
+    flex: 2,
+  },
+  textTwoStyle: {
+    borderWidth: 3,
+    borderColor: 'red',
+    flex: 2,
+  },
+  textThreeStyle: {
+    borderWidth: 3,
+    borderColor: 'red',
+    flex: 1,
   },
 });

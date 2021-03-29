@@ -3,12 +3,12 @@ import { View, Text } from 'react-native';
 import { styles } from './styles';
 
 const BoxScreen = () => {
-  const { viewStyle, textStyle } = styles;
+  const { viewStyle, textOneStyle, textTwoStyle, textThreeStyle } = styles;
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>Child #1</Text>
-      <Text style={textStyle}>Child #2</Text>
-      <Text style={textStyle}>Child #3</Text>
+      <Text style={textOneStyle}>Child #1</Text>
+      <Text style={textTwoStyle}>Child #2</Text>
+      <Text style={textThreeStyle}>Child #3</Text>
     </View>
   );
 };
