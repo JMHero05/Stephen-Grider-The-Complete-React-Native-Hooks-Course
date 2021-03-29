@@ -5,21 +5,20 @@ export const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: 'black',
     height: 200,
+    alignItems: 'center',
     // flexDirection: 'row',
   },
   textOneStyle: {
     borderWidth: 3,
     borderColor: 'red',
-    flex: 2,
   },
   textTwoStyle: {
     borderWidth: 3,
     borderColor: 'red',
-    flex: 2,
+    alignSelf: 'stretch',
   },
   textThreeStyle: {
     borderWidth: 3,
     borderColor: 'red',
-    flex: 1,
   },
 });
