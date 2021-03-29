@@ -4,10 +4,10 @@ export const styles = StyleSheet.create({
   viewStyle: {
     borderWidth: 3,
     borderColor: 'black',
+    alignItems: 'flex-end',
   },
   textStyle: {
-    borderWidth: 10,
+    borderWidth: 3,
     borderColor: 'red',
-    margin: 20,
   },
 });
