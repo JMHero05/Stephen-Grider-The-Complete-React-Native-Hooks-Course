@@ -5,8 +5,6 @@ export const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: 'black',
     height: 200,
-    alignItems: 'flex-start',
-    // flexDirection: 'row',
   },
   textOneStyle: {
     borderWidth: 3,
@@ -15,7 +13,7 @@ export const styles = StyleSheet.create({
   textTwoStyle: {
     borderWidth: 3,
     borderColor: 'red',
-    position: 'absolute',
+    right: 10,
     fontSize: 18,
   },
   textThreeStyle: {
