@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     borderColor: 'black',
     flexDirection: 'row',
     height: 200,
+    justifyContent: 'flex-start',
   },
   textStyle: {
     borderWidth: 3,
