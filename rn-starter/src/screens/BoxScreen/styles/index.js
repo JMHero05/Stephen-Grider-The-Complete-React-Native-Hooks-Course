@@ -2,22 +2,23 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   viewStyle: {
-    borderWidth: 3,
-    borderColor: 'black',
-    height: 200,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
   },
   viewOneStyle: {
-    borderWidth: 3,
-    borderColor: 'red',
+    height: 75,
+    width: 110,
+    backgroundColor: 'rgba(255, 0, 0, 0.5)',
   },
   viewTwoStyle: {
-    borderWidth: 3,
-    borderColor: 'red',
-    fontSize: 18,
-    ...StyleSheet.absoluteFillObject,
+    height: 75,
+    width: 110,
+    backgroundColor: 'rgba(0, 255, 0, 0.5)',
+    top: 75,
   },
   viewThreeStyle: {
-    borderWidth: 3,
-    borderColor: 'red',
+    height: 75,
+    width: 110,
+    backgroundColor: 'rgba(0, 0, 255, 0.5)',
   },
 });
