@@ -6,17 +6,17 @@ export const styles = StyleSheet.create({
     borderColor: 'black',
     height: 200,
   },
-  textOneStyle: {
+  viewOneStyle: {
     borderWidth: 3,
     borderColor: 'red',
   },
-  textTwoStyle: {
+  viewTwoStyle: {
     borderWidth: 3,
     borderColor: 'red',
     fontSize: 18,
     ...StyleSheet.absoluteFillObject,
   },
-  textThreeStyle: {
+  viewThreeStyle: {
     borderWidth: 3,
     borderColor: 'red',
   },
